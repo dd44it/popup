@@ -67,30 +67,26 @@ img {
   margin-left: 15px;
   align-self: center;
 }
-.header__list > .header__item:focus-visible{
-  outline: 1px solid blue;
-  padding: 10px;
-}
 .header__link {
   color: #fff;
   text-decoration: none;
+  padding: 7px;
 }
 .header__link:hover {
   text-decoration: underline;
 }
 .toggle_popup {
-  display: grid;
-  place-items: center;
-  position: relative;
-  height: 40px;
-  width: 40px;
   cursor: pointer;
-  list-style: none;
   transition: 0.15s ease;
 }
 .toggle_popup:hover {
   background-color: rgba(232, 234, 237, 0.08);
   border-radius: 50%;
+}
+.wrap-popup-img{
+  position: relative;
+  display: block;
+  padding: 7px 7px 0 7px;
 }
 .popup_list {
   background-color: #2d2e30;
@@ -139,7 +135,8 @@ img {
 }
 .popup-checkbox,
 .load-checkbox {
-  display: none;
+  appearance: none;
+  position: absolute;
 }
 .popup_list,
 .list_load {
@@ -158,7 +155,7 @@ img {
 .popup_menu__item img {
   height: 50px;
 }
-.user-icon {
+.user-avatar {
   background-color: transparent;
   border: none;
   width: 40px;
@@ -168,8 +165,16 @@ img {
   padding: 4px;
   color: #fff;
 }
-.user-icon:hover {
+.user-avatar:hover {
   background-color: rgba(232,234,237,.08);
+}
+.popup-checkbox:focus + label > .wrap-popup-img, 
+.popup-checkbox:hover + label  .wrap-popup-img{
+  outline: 3px solid rgb(186, 186, 186);
+}
+.header__link:focus-visible,
+.user-avatar:focus-visible {
+  outline: 3px solid rgb(186, 186, 186);
 }
 .main {
   grid-area: main;
