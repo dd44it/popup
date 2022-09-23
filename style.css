@@ -77,11 +77,11 @@ img {
 }
 .toggle_popup {
   cursor: pointer;
-  transition: 0.15s ease;
 }
-.toggle_popup:hover {
+.wrap-popup-img:hover {
   background-color: rgba(232, 234, 237, 0.08);
   border-radius: 50%;
+  transition: 0.15s ease-out;
 }
 .wrap-popup-img{
   position: relative;
@@ -168,12 +168,11 @@ img {
 .user-avatar:hover {
   background-color: rgba(232,234,237,.08);
 }
-.popup-checkbox:focus + label > .wrap-popup-img, 
-.popup-checkbox:hover + label  .wrap-popup-img{
-  outline: 3px solid rgb(186, 186, 186);
-}
+.popup-checkbox:focus-visible + .toggle_popup > .wrap-popup-img,
 .header__link:focus-visible,
-.user-avatar:focus-visible {
+.user-avatar:focus-visible,
+.popup_list_link:focus-visible > .link_wrap,
+.load-checkbox:focus-visible + .load-btn {
   outline: 3px solid rgb(186, 186, 186);
 }
 .main {
