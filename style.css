@@ -111,9 +111,6 @@ img {
 .popup_list_menu {
   margin-bottom: 10px;
 }
-.list_load {
-  margin-top: 10px;
-}
 .menu-item {
   padding: 10px;
   min-width: 110px;
@@ -145,6 +142,9 @@ img {
 .popup-checkbox:checked ~ .popup_list,
 .load-checkbox:checked ~ .list_load {
   display: grid;
+}
+.load-checkbox:checked + .load-btn {
+  display: none;
 }
 .img-wrapper {
   max-width: 50px;
